@@ -31,12 +31,12 @@ musicToggle.addEventListener('click', async () => {
     }
   } else {
     birthdayMusic.pause();
-    musicToggle.textContent = '♫ Putar Lagu nya Sayangku hehehe';
+    musicToggle.textContent = '♫ Putar lagu nya sayangku hehehe';
     musicToggle.setAttribute('aria-pressed', 'false');
   }
 });
 
 birthdayMusic.addEventListener('ended', () => {
-  musicToggle.textContent = '♫ Putar  Putar Lagu nya Sayangku hehehe';
+  musicToggle.textContent = '♫ Putar lagu nya sayangku hehehe';
   musicToggle.setAttribute('aria-pressed', 'false');
 });
