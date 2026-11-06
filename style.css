@@ -41,3 +41,40 @@ footer{text-align:center;padding:22px;color:#b17a91;font-size:.8rem}
 .petals{position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(#f2a9c4 1px,transparent 1px);background-size:34px 34px;opacity:.25}
 @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
 @media(max-width:560px){.hero{padding:58px 18px 38px}.hero:before,.hero:after{font-size:55px}.gallery{gap:12px}.photo-card{padding:8px 8px 13px}.photo-card img,.placeholder{height:150px}.letter{margin-top:45px;padding:34px 22px}.letter-text{font-size:1rem}.section{padding-top:55px}}
+
+
+/* Animasi hati dan bunga melayang */
+.floating-decor {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.floating-decor span {
+  position: absolute;
+  left: var(--x);
+  bottom: -50px;
+  font-size: 23px;
+  opacity: 0;
+  animation: float-up var(--duration) linear var(--delay) infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(-12deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: .8;
+  }
+  50% {
+    transform: translate(22px, -50vh) rotate(12deg);
+    opacity: .75;
+  }
+  100% {
+    transform: translate(-16px, -110vh) rotate(-18deg);
+    opacity: 0;
+  }
+}
